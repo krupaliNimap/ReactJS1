@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function HookExampleOne() {
-    const [count, setCount] = 
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    document.title = `count ${count + 90}`;
+  });
   return (
     <div>
-      <p>HookExampleOne</p>
+      <p>Hook Effect Example One(document title)</p>
+      <button onClick={() => setCount(count + 1)}>Click {count}</button>
     </div>
   );
 }

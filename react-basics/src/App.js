@@ -5,6 +5,7 @@ import ConditionExample from "./components/ConditionExampleOne.js";
 import ConditionExampleTwo from "./components/ConditionExampleTwo.js";
 import ConditionExampleThree from "./components/ConditionExampleThree.js";
 import ListExampleOne from "./components/ListExampleOne.js";
+import ListExampleTwo from "./components/ListExampleTwo.js";
 
 function App() {
   const fruits = {
@@ -30,6 +31,9 @@ function App() {
       <hr></hr>
       Rendering through list.
       <ListExampleOne />
+      <hr></hr>
+      Rendering through list having id/key
+      <ListExampleTwo />
       <hr></hr>
     </div>
   );

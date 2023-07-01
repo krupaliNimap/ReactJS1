@@ -2,15 +2,14 @@ import React, { useEffect, useState } from "react";
 
 function HooksExampleFive() {
   const [count, setCount] = useState(0);
-  const tick = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
+  // const tick = () => {
+  //   setCount((prevCount) => prevCount + 1);
+  // };
   useEffect(() => {
-    function doSomething() {
-      console.log(someProp);
-    }
-    doSomething();
-    const interval = setInterval(tick, 1000);
+    const interval = setInterval(
+      setCount((count1) => count1 + 1),
+      2000
+    );
   }, [count]);
 
   return (
